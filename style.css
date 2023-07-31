@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Inline+Text:wght@100&family=Noto+Sans+Vithkuqi&display=swap');;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Anton', sans-serif;
+font-family: 'Big Shoulders Inline Text', cursive;
+font-family: 'Noto Sans Vithkuqi', sans-serif;
+  background-image: linear-gradient(to right, rgb(178, 148, 176),   rgb(108, 166, 185));
+  color: brown;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 25px 0;
+}
+
+.nav h2 {
+  font-size: 2rem;
+}
+
+.userinput {
+  width: 350px;
+  text-align: center;
+}
+
+.userinput input {
+  width: 80%;
+  outline: none;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: all 0.30s ease-in-out;
+}
+
+.userinput input:focus {
+  box-shadow: 0 0 5px #e22865;
+  border: 1px solid #e22865;
+}
+
+.userinput button {
+  cursor: pointer;
+  width: fit-content;
+  transition: 1s;
+  outline: none;
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.userinput button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.TO-DO-ITEMS {
+  width: 500px;
+  margin: auto;
+}
+
+.item {
+  background-color: white;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  padding: 16px;
+  color: black;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.30s ease-in-out;
+}
+
+
+.item.completed div {
+  text-decoration: line-through;
+}
+
+.item:hover {
+  box-shadow: 0 0 20px #e22865;
+  border: 1px solid #e22865;
+}
+
+.item i {
+  cursor: pointer;
+  font-size: 1.5rem; 
+  margin: 0 3px; 
+}
+
+@media(max-width:768px) {
+  .nav {
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav h2 {
+    margin: 10px 0;
+  }
+  .userinput {
+    width: 100%;
+  }
+  .TO-DO-ITEMS {
+    width: 100%;
+  }
+}
+
+@media(max-width:480px) {
+  .userinput input {
+    width: 74%;
+  }
+}
+
+@media(max-width:320px) {
+  .userinput input {
+    width: 60%;
+  }
+}
